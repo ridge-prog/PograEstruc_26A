@@ -1,4 +1,3 @@
-//ACT 6
 #include <stdio.h>
 #include <stdlib.h>
 
