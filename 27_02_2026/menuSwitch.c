@@ -1,10 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 int main()
 {
-    int opc, opc2, x, y;
-    printf("Menu de seleccion\n");
+    int opc, opc2, x, y, res;
+do{
+    printf("\nMenu de seleccion\n");
 
     printf("1.-Analizar Num\n");
     printf("2.-Calculadora\n");
@@ -18,9 +20,9 @@ int main()
             printf("Dame un numero entero: ");
             scanf("%d", &x);
             if (x%2==0){
-                printf("Numero par.\n");
+                printf("\nNumero %d par.\n", x);
             }else{
-                printf("Numero impar.\n");
+                printf("\nNumero %d impar.\n", x);
             }
             break;
 
@@ -30,19 +32,21 @@ int main()
             printf("Dame dos numeros enteros:");
             scanf("%d \n %d", &x, &y);
 
-            printf("El primer operando es: %d, El segundo es: %d", x, y);
+            printf("El primer operando es: %d\nEl segundo es: %d", x, y);
 
-            printf("\n1.Suma\n2.Resta\n");
+            printf("\nQue quieres hacer?\n1.Suma\n2.Resta\n3.Regresar\n");
             scanf("%d", &opc2);
 
             switch(opc2){
                 case 1:
-                    x+=y;
-                    printf("Resultado: %d", x);
+                    res = x+y;
+                    printf("\nResultado: %d\n", res);
                     break;
                 case 2:
-                    x-=y;
-                    printf("Resultado: %d", x);
+                    res = x-y;
+                    printf("\nResultado: %d\n", res);
+                    break;
+                case 3:
                     break;
                 default:
                     printf("////////Opcion NO VALIDA////////// \n");
@@ -59,4 +63,7 @@ int main()
             printf("////////Opcion NO VALIDA////////// \n");
             break;
     }
+
+}while(opc!=3);
+
 }
