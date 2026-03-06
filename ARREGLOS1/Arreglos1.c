@@ -47,7 +47,7 @@ int main()
 //// For para IMPRIMIR datos
     for(i=0; i<N; i++)
     {
-        printf("\n%.4f",temp[i]);
+        printf("DATO:%.4f,DIR DE MEMORIA:%i\n", temp[i], &temp[i]);
     }
 
     return 0;
