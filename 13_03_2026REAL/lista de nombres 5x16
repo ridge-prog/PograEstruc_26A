@@ -32,16 +32,17 @@ int main()
     */
 
     for (i=0; i<n; i++){
-        printf("Alumno %d:\n");
+        printf("Alumno %d:\n", i);
         fgets(alumno2, sizeof(alumno2), stdin);
         printf("\n");
-        
+        strcpy(lista[i], alumno2);
+
     }
 
 printf("Lista:\n");
     for (i=0; i<n; i++){
-        printf("%s", lista[i]);
-        printf("\n");
+        printf("%s", lista[i]
+               );
     }
 
     return 0;
