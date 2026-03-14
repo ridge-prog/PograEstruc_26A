@@ -10,10 +10,22 @@ int main()
 
     int n=5, m=16;
     char lista[n][m];
+    
+    for (i=0; i<n; i++){
+        printf("Alumno %d:\n", i);
+        fgets(alumno2, sizeof(alumno2), stdin);
+        printf("\n");
+        strcpy(lista[i], alumno2);
 
-    longitud=strlen(lista[0]);
-    printf("la longitud de 15, es %d\n", lista[0], longitud);
+    }
 
+    printf("Lista:\n");
+    for (i=0; i<n; i++){
+        printf("%s", lista[i]);
+        longitud=strlen(lista[i]);
+        printf("la longitud de %sEs %d\n", lista[i], longitud);
+    }
+    
     /*
     printf("alumno1:%s\n", alumno1);
     /*
@@ -30,20 +42,6 @@ int main()
     fgets(alumno2, sizeof(alumno2), stdin);
     printf("alumno2 fgets:%s\n", alumno2);
     */
-
-    for (i=0; i<n; i++){
-        printf("Alumno %d:\n", i);
-        fgets(alumno2, sizeof(alumno2), stdin);
-        printf("\n");
-        strcpy(lista[i], alumno2);
-
-    }
-
-printf("Lista:\n");
-    for (i=0; i<n; i++){
-        printf("%s", lista[i]
-               );
-    }
-
+    
     return 0;
 }
