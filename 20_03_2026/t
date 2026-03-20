@@ -1,0 +1,15 @@
+Arreglo es un conjunto de caracteres del mismo tipo
+
+arreglo unidimensional
+permite almacenar varios valores del mismo tipo usando un solo identificador
+ejemplo
+int numero[5];
+numero[0-4]
+
+bidimensional
+
+
+tridimensional
+
+
+String cadena de caracteres
