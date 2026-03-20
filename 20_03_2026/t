@@ -15,6 +15,10 @@ tridimensional
 String cadena de caracteres
 
 
+FILE *archivo;
+archivo = fopen("tablerotexto.txt", "w");
+/*
+
 /*
 1980    h
 1981    o
