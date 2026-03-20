@@ -48,7 +48,9 @@ int main()
 
     fclose(archivo); //cierre de archivo
     archivo = fopen("tablero.txt","r");
-    fscanf("")
+    char a[20];
+    fscanf(archivo, "%s",&a); //que lo lea sin importar en que linea se encuentre
+    printf("%s", a);
 
     /*
     fprintf(archivo,"\nRene Obed Lopez\n");
@@ -74,3 +76,4 @@ int main()
 */
     return 0;
 }
+
