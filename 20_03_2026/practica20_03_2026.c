@@ -10,14 +10,15 @@ int main()
     char NOMBRE[20];//arreglo unidimensional
 
     //ejemplo de carga e impresion
+    /*
     for(i=0; i<5; i++){
         scanf("%d", &numero[i]);
     }
     for(i=0; i<5; i++){
         printf("%d", numero[i]);
     }
+    */
 
-    
     //lista de nombres
     for(i=0; i<maxnombres; i++){//escribir nombres
         strcpy(nombres[i], fgets(NOMBRE, sizeof(NOMBRE), stdin));
