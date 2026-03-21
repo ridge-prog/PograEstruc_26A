@@ -46,7 +46,6 @@ int main()
         printf("%d.%d\n",j,ArregloC[j]);
     }
     printf("%d\n",ArregloC);
-    return 0;
 */
-
+    return 0;
 }
