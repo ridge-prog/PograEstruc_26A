@@ -4,7 +4,7 @@
 
 int main()
 {
-    int maxnombres=1, maxchar=20, n=5, i, j;
+    int maxnombres=1, maxchar=20, n=5, i, j, k;
     char tablero[n][n];
     char nombres[maxnombres][maxchar];//arreglo bidimensional de caracteres
     char NOMBRE[maxchar];//arreglo unidimensional
@@ -31,13 +31,20 @@ int main()
 
 
     for(i=0; i<maxnombres; i++){//escribir nombres
-        strcpy(nombres[i], fgets(NOMBRE, sizeof(NOMBRE), stdin));
+        fgets(NOMBRE, sizeof(NOMBRE), stdin);
+        for (j=0; NOMBRE[j]!='\0'; j++){
+            if (NOMBRE[j]=='\n'){
+                NOMBRE[j]=0;
+                break;
+            }
+        }
+        strcpy(nombres[i], NOMBRE);
     }
 
     for(i=0; i<maxnombres; i++){//imprimir nombres
-        fprintf(archivo, "%s", nombres[i]);
+        fprintf(archivo, "%s ", nombres[i]);
     }
-    fprintf(archivo,"Obed\n\n");
+    fprintf(archivo,"ren\n\n");
 
     for(i=0; i<n; i++){//imprimir matriz
         for(j=0; j<n; j++){
@@ -49,8 +56,19 @@ int main()
     fclose(archivo); //cierre de archivo
     archivo = fopen("tablero.txt","r");
     char a[20];
-    fscanf(archivo, "%s",&a); //que lo lea sin importar en que linea se encuentre
-    printf("%s", a);
+
+    while (fscanf(archivo, "%s",a) == 1){ //que lo lea sin importar en que linea se encuentre
+        if (strcmp(a, nombres[0])==0){
+            printf("Palabra encontrada en el .txt: %s, \nPalabra que se ingreso en la consola: %s\n", a, nombres[0]);
+        }
+    }
+    fclose(archivo);
+    return 0;
+}
+
+
+
+
 
     /*
     fprintf(archivo,"\nRene Obed Lopez\n");
@@ -74,6 +92,3 @@ int main()
         printf("\n");
     }
 */
-    return 0;
-}
-
