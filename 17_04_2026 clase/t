@@ -1,0 +1,105 @@
+SINTAXIS GENERAL
+tipo nombreFuncion(Parametros){
+  instrucciones;
+  return valor;
+}
+
+Las funciones dividen el problema en partes pequeñas, facilitan la lectura, permiten reutilizar codigo y facilitan pruebas y mantenimiento.
+Al tener todo seccionado, da pie posterior a hacer la modulalizacion.
+Al tener separadas las funciones es mas facil aislar un problema, podemos utilizar el return para detectar errores.
+Paso de parametro por valor
+Solamente pasa el valor y se lo estamos dando a la funcion, si yo hago un paso de parametro por referencia le estoy indicando en que direccion de memoria esta.
+Void es un procedimiento, no retorna nada.
+Al trabajar con arreglos, se envia el puntero y se modifica la dir. de memoria del main.
+
+
+
+#include <stdio.h>
+
+void cambiar(int x){
+  x=100;
+}
+
+int main(){
+  int a=5;
+  cambiar(a);
+  printf("%d", a);
+  return 0;
+}
+
+No se modifica el valor por que le hicimos una copia. Variables locales, estamos hablando de variables que pertenecen a funciones. Solamente se modifica en el espacio de cambiar, pero main esta intacta.
+
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void mostrarMatriz(int m[2][3]){
+    int i,j;
+    for(i=0;i<2;i++){
+        for(j=0;j<3;j++){
+            printf("%d ", m[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main(){
+    int matriz[2][3]={{1,2,3},{4,5,6}};
+    mostrarMatriz(matriz);
+    return 0;
+}
+
+
+/*
+void mostrar(int v[], int n){
+    int i;
+    for(i=0;i<n;i++){
+        printf("%d ", v[i]);
+    }
+}
+
+int main(){
+    int datos[5]={1,2,3,4,5};
+    mostrar(datos, 5);
+    return 0;
+}*/
+
+
+
+/*
+int main(){
+    int v[2];
+    printf("%d", v);
+    return 0;
+}*/
+
+
+
+
+/*
+int suma(int a, int b){
+    int res;
+    res = a+b;
+    return res;
+}
+int main()
+{
+    int a, b, res;
+    printf("Introduce 2 numeros a sumar:\n");
+    scanf("%d%d", &a, &b);
+    res = suma(a, b);
+    printf("%d", res);
+    return 0;
+}*/
+
+/*
+void cambiar(int x){
+  x=100;
+}
+
+int main(){
+  int a=5;
+  cambiar(a);
+  printf("%d", a);
+  return 0;
+}*/
