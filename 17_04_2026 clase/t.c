@@ -1,4 +1,4 @@
-SINTAXIS GENERAL
+/*SINTAXIS GENERAL
 tipo nombreFuncion(Parametros){
   instrucciones;
   return valor;
@@ -11,7 +11,7 @@ Paso de parametro por valor
 Solamente pasa el valor y se lo estamos dando a la funcion, si yo hago un paso de parametro por referencia le estoy indicando en que direccion de memoria esta.
 Void es un procedimiento, no retorna nada.
 Al trabajar con arreglos, se envia el puntero y se modifica la dir. de memoria del main.
-
+*/
 
 
 #include <stdio.h>
@@ -26,9 +26,9 @@ int main(){
   printf("%d", a);
   return 0;
 }
-
+/*
 No se modifica el valor por que le hicimos una copia. Variables locales, estamos hablando de variables que pertenecen a funciones. Solamente se modifica en el espacio de cambiar, pero main esta intacta.
-
+*/
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -105,7 +105,7 @@ int main(){
 }*/
 
 /*
-paso de parametro por referencia
+//paso de parametro por referencia
 
 //* pasa la mem de direccion?
 
