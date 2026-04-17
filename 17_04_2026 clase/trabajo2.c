@@ -18,6 +18,8 @@ int filtrar(int arreglo[], int arreglo2[],int n){
     for (i=0;i<n;i++){
         if (arreglo[i]%2!=0){
             arreglo2[i]=arreglo[i];
+        }else{
+            arreglo2[i] = 0;
         }
     }return 0;
 }
@@ -43,8 +45,14 @@ int main()
         longitud2=sizeof(arreglo2)/4;
         mostrar(arreglo2, longitud2);
 
+    fprintf(f, "Arreglo original\n");
+    for (i=0;i<longitud; i++){
+        fprintf(f, "%d ", arreglo[i]);
+    }
+
+    fprintf(f, "\nArreglo filtrado\n");
     for (i=0;i<longitud2; i++){
-        fprintf(f, "%d", arreglo2[i]);
+        fprintf(f, "%d ", arreglo2[i]);
     }
     fclose(f);
 
