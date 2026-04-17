@@ -104,10 +104,10 @@ int main(){
   return 0;
 }*/
 
-
+/*
 paso de parametro por referencia
 
-*pasa la mem de direccion?
+//* pasa la mem de direccion?
 
 void duplicar(int *x){
     *x = (*x)*2;
@@ -118,6 +118,4 @@ int main(){
     duplicar(&n);
     printf("%d", n);
     return 0;
-}
-
-
+}*/
