@@ -51,7 +51,7 @@ void guardarmatriz(int m[3][3], FILE *f){
 }
 
 void guardardiagonal(FILE *f, int diagonal){
-    fprintf(f, "\nDiagonal = %d", diagonal);
+    fprintf(f, "\nDiagonal = %d\n", diagonal);
 }
 
 
