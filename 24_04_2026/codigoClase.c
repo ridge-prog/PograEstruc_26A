@@ -41,7 +41,7 @@ int diagonal(int m[3][3]){
     }return total;
 }
 
-void guardar(int m[3][3], FILE *f){
+void guardarmatriz(int m[3][3], FILE *f){
     int i,j;
     for (i=0; i<3; i++){
         for (j=0; j<3; j++){
@@ -49,6 +49,11 @@ void guardar(int m[3][3], FILE *f){
         }fprintf(f, "\n");
     }
 }
+
+void guardardiagonal(FILE *f, int diagonal){
+    fprintf(f, "\nDiagonal = %d", diagonal);
+}
+
 
 
 int main()
@@ -61,8 +66,9 @@ int main()
 
     capturar(m);
     mostrar(m);
-    printf("%d", diagonal(m));
-    guardar(m, f);
+    printf("Diagonal = %d", diagonal(m));
+    guardarmatriz(m, f);
+    guardardiagonal(f, diagonal(m));
 
     fclose(f);
 
