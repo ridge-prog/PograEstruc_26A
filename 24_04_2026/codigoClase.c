@@ -53,9 +53,9 @@ void guardar(int m[3][3], FILE *f){
 
 int main()
 {
-    int v[3];
+    //int v[3];
     int m[3][3];
-    int n = 2;
+    //int n = 2;
     FILE *f;
     f = fopen("tablero.txt","w");
 
