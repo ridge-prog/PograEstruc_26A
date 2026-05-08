@@ -115,3 +115,42 @@ int main()
     printf("%d", *p);
 }
 */
+
+/*
+//cuando requerimos de MUCHA memoria, utilizamos malloc
+int main()
+{
+    int *v<
+    v = (int*)malloc(5*sizeo(int));
+    return 0;
+}
+*/
+//recursividad. una funcion se llama a si misma
+//TODA FUNCION RECURSIVA NECESITA UNA CONDICION PARA DETENERSE
+/*
+int f_resta(int a)
+{
+    printf("%d\n",a);
+    a=a-2;
+    if (a<=0){
+        return a;
+    }else{
+        f_resta(a);
+    }
+}
+
+int factorial(int n)
+{
+    if (n==1)
+        return 1;
+    
+    return n*factorial(n-1);
+}
+
+int main()
+{
+    //f_resta(6);
+    factorial(5)
+    return 0;
+}
+*/
